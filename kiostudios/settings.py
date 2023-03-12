@@ -24,8 +24,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 SECRET_KEY = 'django-insecure-nqr78@=$nqjg%jd^-drr=5z1b)%w-3$f4ej)b680w4f9flpe-y'
-DEBUG = config('DEBUG', default=False, cast=bool)
-DATABASES = { 'default': dj_database_url.config( default=config('postgres://eqekxtnbxwpphr:b54b3210fc888ac771902340c1827f064f69a4940e4b6dcabca45e72205c4bb0@ec2-34-226-11-94.compute-1.amazonaws.com:5432/dc0pasnkguqi8t') )}
+# DEBUG = config('DEBUG', default=False, cast=bool)
+# DATABASES = { 'default': dj_database_url.config( default=config('postgres://eqekxtnbxwpphr:b54b3210fc888ac771902340c1827f064f69a4940e4b6dcabca45e72205c4bb0@ec2-34-226-11-94.compute-1.amazonaws.com:5432/dc0pasnkguqi8t') )}
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -154,9 +154,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+
 
 # ロギング設定
 LOGGING = {
@@ -200,5 +198,3 @@ LOGGING = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
