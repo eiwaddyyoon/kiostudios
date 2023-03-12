@@ -196,3 +196,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'collected-media'
 
 django_heroku.settings(locals())
+django_heroku.settings(locals(),staticfiles=False)
