@@ -182,7 +182,7 @@ LOGGING = {
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT = BASE_DIR / 'collected-static'
+STATIC_ROOT = BASE_DIR / 'static'
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [
@@ -193,7 +193,7 @@ STATICFILES_DIRS = [
     ]
 MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_ROOT = BASE_DIR / 'collected-media'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 django_heroku.settings(locals())
 django_heroku.settings(locals(),staticfiles=False)
