@@ -14,24 +14,41 @@ from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
 import dj_database_url
-import config
+from dotenv import load_dotenv
+load_dotenv()
 # # Build paths inside the project like this: BASE_DIR / 'subdir'.
-# BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
-SECRET_KEY = 'django-insecure-nqr78@=$nqjg%jd^-drr=5z1b)%w-3$f4ej)b680w4f9flpe-y'
-# DEBUG = config('DEBUG', default=False, cast=bool)
-# DATABASES = { 'default': dj_database_url.config( default=config('postgres://eqekxtnbxwpphr:b54b3210fc888ac771902340c1827f064f69a4940e4b6dcabca45e72205c4bb0@ec2-34-226-11-94.compute-1.amazonaws.com:5432/dc0pasnkguqi8t') )}
+SECRET_KEY = os.getenv('SECRET_KEY')
+if 'SECRET_KEY' in os.environ:
+    SECRET_KEY = os.environ["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+DATABASES = os.getenv('DATABASES')
 
+if "DATABASE_URL" in os.environ:
+    # Configure Django for DATABASE_URL environment variable.
+    DATABASES["default"] = dj_database_url.config(
+        conn_max_age=MAX_CONN_AGE, ssl_require=True)
+
+    # Enable test database if found in CI environment.
+    if "CI" in os.environ:
+        DATABASES["default"]["TEST"] = DATABASES["default"]
+        
 # ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
-ALLOWED_HOSTS = ['kiostudios.herokuapp.com']
-
+# ALLOWED_HOSTS = ['kiostudios.herokuapp.com']
+if IS_HEROKU:
+    ALLOWED_HOSTS = ["*"]
+else:
+    ALLOWED_HOSTS = []
+# SECURITY WARNING: don't run with debug turned on in production!
+if not IS_HEROKU:
+    DEBUG = True
 WHITENOISE_USE_FINDERS = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Application definition
@@ -83,12 +100,12 @@ WSGI_APPLICATION = 'kiostudios.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 # データベース設定
 # DATABASES = {
 #      'default': {
@@ -101,19 +118,17 @@ WSGI_APPLICATION = 'kiostudios.wsgi.application'
 #      }
 #  }
 # データベース設定
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'kiostudios',
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'kiostudios',
+#         'USER': os.environ.get('DB_USER'),
+#         'PASSWORD': os.environ.get('DB_PASSWORD'),
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
