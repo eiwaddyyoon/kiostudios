@@ -185,15 +185,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # STATIC_ROOT = BASE_DIR / 'collected-static'
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/img'),
-    os.path.join(BASE_DIR, 'static/css'),
-    os.path.join(BASE_DIR, 'static/js'),
-    os.path.join(BASE_DIR, 'static/icon'),
-    ]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static/img'),
+#     os.path.join(BASE_DIR, 'static/css'),
+#     os.path.join(BASE_DIR, 'static/js'),
+#     os.path.join(BASE_DIR, 'static/icon'),
+#     ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIA_ROOT = BASE_DIR / 'collected-media'
 
 django_heroku.settings(locals())
-django_heroku.settings(locals(),staticfiles=False)
