@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'django-insecure-nqr78@=$nqjg%jd^-drr=5z1b)%w-3$f4ej)b680w4f9flpe-y'
 DEBUG = config('DEBUG', default=False, cast=bool)
 DATABASES = { 'default': dj_database_url.config( default=config('postgres://eqekxtnbxwpphr:b54b3210fc888ac771902340c1827f064f69a4940e4b6dcabca45e72205c4bb0@ec2-34-226-11-94.compute-1.amazonaws.com:5432/dc0pasnkguqi8t') )}
 # SECURITY WARNING: don't run with debug turned on in production!
