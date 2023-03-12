@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- linking css file -->
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -62,7 +64,7 @@
           </div>
           <div class="col-lg-6">
             <div class="row mt-3">
-              <img class="main-img" src="static/img/computer.png" alt="runningcat">
+              <img class="main-img" src="{% static 'img/computer.png' %}" alt="runningcat">
             </div>
           </div>
         </div>
@@ -95,13 +97,13 @@
               <h2>Motto</h2>
               <button class="glow-on-hover" type="button"><i>Hold onto your passion until it becomes your profession.</i></button>
             </div>
-            <img class="about-img" src="static/img/progress.png">
+            <img class="about-img" src="{% static 'img/progress.png' %}">
 
             <div class="row mt-3" style="transform: translate(0%, -10%);">
               <h2>Vision</h2>
               <button class="glow-on-hover" type="button"><i>My goal is to become a professional full-stack web developer who can build complex web applications.</i></button>
             </div>
-            <img class="about-img2" src="static/img/engineer.png">
+            <img class="about-img2" src="{% static 'img/engineer.png' %}">
           
           </div>
 
@@ -192,14 +194,14 @@
 
             <div class="skillsets">
               <div class="row mt-3 icon">
-                <div class="col-md-3"><img class="html" src="static/icon/html.png"></div>
+                <div class="col-md-3"><img class="html" src="{% static 'icon/html.png' %}"></div>
                 <div class="col-md-3 circle-wrap">
                   <div class="mask full"><div class="fill ninety"></div></div>
                   <div class="mask half"><div class="fill ninety"></div></div>
                   <div class="inside-circle">90%</div>
                 </div>
 
-                <div class="col-md-3"><img class="css" src="static/icon/css.png"></div>
+                <div class="col-md-3"><img class="css" src="{% static 'icon/css.png' %}"></div>
                 <div class="col-md-3 circle-wrap">
                   <div class="mask full"><div class="fill ninety"></div></div>
                   <div class="mask half"><div class="fill ninety"></div></div>
@@ -208,14 +210,14 @@
               </div>
               
               <div class="row mt-3 icon">
-                <div class="col-md-3"><img class="js" src="static/icon/js.png"></div>
+                <div class="col-md-3"><img class="js" src="{% static 'icon/js.png' %}"></div>
                 <div class="col-md-3 circle-wrap">
                   <div class="mask full"><div class="fill ninety"></div></div>
                   <div class="mask half"><div class="fill ninety"></div></div>
                   <div class="inside-circle">90%</div>
                 </div>
 
-                <div class="col-md-3"><img class="python" src="static/icon/python.png"></div>
+                <div class="col-md-3"><img class="python" src="{% static 'icon/python.png' %}"></div>
                 <div class="col-md-3 circle-wrap">
                   <div class="mask full"><div class="fill ninety"></div></div>
                   <div class="mask half"><div class="fill ninety"></div></div>
@@ -224,14 +226,14 @@
               </div>
 
               <div class="row mt-3 icon">
-                <div class="col-md-3"><img class="java" src="static/icon/java.png"></div>
+                <div class="col-md-3"><img class="java" src="{% static 'icon/java.png' %}"></div>
                 <div class="col-md-3 circle-wrap">
                   <div class="mask full"><div class="fill sixtyfive"></div></div>
                   <div class="mask half"><div class="fill sixtyfive"></div></div>
                   <div class="inside-circle">65%</div>
                 </div>
 
-                <div class="col-md-3"><img class="linux" src="static/icon/linux.png"></div>
+                <div class="col-md-3"><img class="linux" src="{% static 'icon/linux.png' %}"></div>
                 <div class="col-md-3 circle-wrap">
                   <div class="mask full"><div class="fill eighty"></div></div>
                   <div class="mask half"><div class="fill eighty"></div></div>
@@ -240,14 +242,14 @@
               </div>
 
               <div class="row mt-3 icon">
-                <div class="col-md-3"><img class="sql" src="static/icon/sql.png"></div>
+                <div class="col-md-3"><img class="sql" src="{% static 'icon/sql.png' %}"></div>
                 <div class="col-md-3 circle-wrap">
                   <div class="mask full"><div class="fill sixtyfive"></div></div>
                   <div class="mask half"><div class="fill sixtyfive"></div></div>
                   <div class="inside-circle">65%</div>
                 </div>
 
-                <div class="col-md-3"><img class="office" src="static/icon/office.png"></div>
+                <div class="col-md-3"><img class="office" src="{% static 'icon/office.png' %}"></div>
                 <div class="col-md-3 circle-wrap">
                   <div class="mask full"><div class="fill ninety"></div></div>
                   <div class="mask half"><div class="fill ninety"></div></div>
@@ -256,14 +258,14 @@
               </div>
 
               <div class="row mt-3 icon">
-                <div class="col-md-3"><img class="winactor" src="static/icon/winactor.png"></div>
+                <div class="col-md-3"><img class="winactor" src="{% static 'icon/winactor.png' %}"></div>
                 <div class="col-md-3 circle-wrap">
                   <div class="mask full"><div class="fill ninety"></div></div>
                   <div class="mask half"><div class="fill ninety"></div></div>
                   <div class="inside-circle">90%</div>
                 </div>
 
-                <div class="col-md-3"><img class="vba" src="static/icon/vba.png"></div>
+                <div class="col-md-3"><img class="vba" src="{% static 'icon/vba.png' %}"></div>
                 <div class="col-md-3 circle-wrap">
                   <div class="mask full"><div class="fill fifty"></div></div>
                   <div class="mask half"><div class="fill fifty"></div></div>
@@ -272,14 +274,14 @@
               </div>
 
               <div class="row mt-3 icon">
-                <div class="col-md-3"><img class="django" src="static/icon/django.png"></div>
+                <div class="col-md-3"><img class="django" src="{% static 'icon/django.png' %}"></div>
                 <div class="col-md-3 circle-wrap">
                   <div class="mask full"><div class="fill eighty"></div></div>
                   <div class="mask half"><div class="fill eighty"></div></div>
                   <div class="inside-circle">80%</div>
                 </div>
 
-                <div class="col-md-3"><img class="bootstrap" src="static/icon/bootstrap.png"></div>
+                <div class="col-md-3"><img class="bootstrap" src="{% static 'icon/bootstrap.png' %}"></div>
                 <div class="col-md-3 circle-wrap">
                   <div class="mask full"><div class="fill eighty"></div></div>
                   <div class="mask half"><div class="fill eighty"></div></div>
@@ -288,14 +290,14 @@
               </div>
 
               <div class="row mt-3 icon">
-                <div class="col-md-3"><img class="nodejs" src="static/icon/nodejs.png"></div>
+                <div class="col-md-3"><img class="nodejs" src="{% static 'icon/nodejs.png' %}"></div>
                 <div class="col-md-3 circle-wrap">
                   <div class="mask full"><div class="fill thirty"></div></div>
                   <div class="mask half"><div class="fill thirty"></div></div>
                   <div class="inside-circle">30%</div>
                 </div>
 
-                <div class="col-md-3"><img class="react" src="static/icon/react.png"></div>
+                <div class="col-md-3"><img class="react" src="{% static 'icon/react.png' %}"></div>
                 <div class="col-md-3 circle-wrap">
                   <div class="mask full"><div class="fill thirty"></div></div>
                   <div class="mask half"><div class="fill thirty"></div></div>
@@ -321,7 +323,7 @@
         <div class="row">
           <div class="col-lg-4 mt-4">
             <div class="card projectsContent">
-              <img class="card-img-top" src="static/img/blog.png" alt="Card image" style="width:100%;">
+              <img class="card-img-top" src="{% static 'img/blog.png' %}" alt="Card image" style="width:100%;">
               <div class="card-body">
                 <h4 class="card-title">Private Blog</h4>
                 <div class="card-text">
@@ -334,7 +336,7 @@
 
           <div class="col-lg-4 mt-4">
             <div class="card projectsContent">
-              <img class="card-img-top" src="static/img/ecommerce.png" alt="Card image" style="width:100%">
+              <img class="card-img-top" src="{% static 'img/ecommerce.png' %}" alt="Card image" style="width:100%">
               <div class="card-body">
                 <h4 class="card-title">E-Commerce Site</h4>
                 <div class="card-text">
@@ -347,7 +349,7 @@
 
           <div class="col-lg-4 mt-4">
             <div class="card projectsContent">
-              <img class="card-img-top" src="static/img/cafe.png" alt="Card image" style="width:100%">
+              <img class="card-img-top" src="{% static 'img/cafe.png' %}" alt="Card image" style="width:100%">
               <div class="card-body">
                 <h4 class="card-title">Cafe Homepage</h4>
                 <div class="card-text">
@@ -363,7 +365,7 @@
         <div class="row">
           <div class="col-lg-4 mt-4">
             <div class="card projectsContent">
-              <img class="card-img-top" src="static/img/socialmedia.png" alt="Card image" style="width:100%">
+              <img class="card-img-top" src="{% static 'img/socialmedia.png' %}" alt="Card image" style="width:100%">
               <div class="card-body">
                 <h4 class="card-title">Social Media App</h4>
                 <div class="card-text">
@@ -376,7 +378,7 @@
 
           <div class="col-lg-4 mt-4">
             <div class="card projectsContent">
-              <img class="card-img-top" src="static/img/clothingstore.png" alt="Card image" style="width:100%">
+              <img class="card-img-top" src="{% static 'img/clothingstore.png' %}" alt="Card image" style="width:100%">
               <div class="card-body">
                 <h4 class="card-title">Clothing Store Homepage</h4>
                 <div class="card-text">
@@ -389,7 +391,7 @@
 
           <div class="col-lg-4 mt-4">
             <div class="card projectsContent">
-              <img class="card-img-top" src="static/img/gallery.png" alt="Card image" style="width:100%">
+              <img class="card-img-top" src="{% static 'img/gallery.png' %}" alt="Card image" style="width:100%">
               <div class="card-body">
                 <h4 class="card-title">Artist's Gallery</h4>
                 <div class="card-text">
@@ -405,7 +407,7 @@
       <div class="row">
         <div class="col-lg-4 mt-4">
           <div class="card projectsContent">
-            <img class="card-img-top" src="static/img/browser.png" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="{% static 'img/browser.png' %}" alt="Card image" style="width:100%">
             <div class="card-body">
               <h4 class="card-title">Browser Activity Automation</h4>
               <div class="card-text">
@@ -418,7 +420,7 @@
 
         <div class="col-lg-4 mt-4">
           <div class="card projectsContent">
-            <img class="card-img-top" src="static/img/personal.png" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="{% static 'img/personal.png' %}" alt="Card image" style="width:100%">
             <div class="card-body">
               <h4 class="card-title">Portfolio Site</h4>
               <div class="card-text">
@@ -431,7 +433,7 @@
 
         <div class="col-lg-4 mt-4">
           <div class="card projectsContent">
-            <img class="card-img-top" src="static/img/webscrapy.png" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="{% static 'img/webscrapy.png' %}" alt="Card image" style="width:100%">
             <div class="card-body">
               <h4 class="card-title">Web Scraping System</h4>
               <div class="card-text">
@@ -447,7 +449,7 @@
     <div class="row">
       <div class="col-lg-4 mt-4">
         <div class="card projectsContent">
-          <img class="card-img-top" src="static/img/foodorder.png" alt="Card image" style="width:100%">
+          <img class="card-img-top" src="{% static 'img/foodorder.png' %}" alt="Card image" style="width:100%">
           <div class="card-body">
             <h4 class="card-title">Online Food Order</h4>
             <div class="card-text">
@@ -460,7 +462,7 @@
 
       <div class="col-lg-4 mt-4">
         <div class="card projectsContent">
-          <img class="card-img-top" src="static/img/hotelbooking.png" alt="Card image" style="width:100%">
+          <img class="card-img-top" src="{% static 'img/hotelbooking.png' %}" alt="Card image" style="width:100%">
           <div class="card-body">
             <h4 class="card-title">Online Hotel Booking</h4>
             <div class="card-text">
@@ -473,7 +475,7 @@
 
       <div class="col-lg-4 mt-4">
         <div class="card projectsContent">
-          <img class="card-img-top" src="static/img/restaurant.png" alt="Card image" style="width:100%">
+          <img class="card-img-top" src="{% static 'img/restaurant.png' %}" alt="Card image" style="width:100%">
           <div class="card-body">
             <h4 class="card-title">Restaurant Homepage</h4>
             <div class="card-text">
@@ -489,7 +491,7 @@
     <div class="row">
       <div class="col-lg-4 mt-4">
         <div class="card projectsContent">
-          <img class="card-img-top" src="static/img/tasks.png" alt="Card image" style="width:100%">
+          <img class="card-img-top" src="{% static 'img/tasks.png' %}" alt="Card image" style="width:100%">
           <div class="card-body">
             <h4 class="card-title">Tasks List</h4>
             <div class="card-text">
@@ -502,7 +504,7 @@
 
       <div class="col-lg-4 mt-4">
         <div class="card projectsContent">
-          <img class="card-img-top" src="static/img/staff.png" alt="Card image" style="width:100%">
+          <img class="card-img-top" src="{% static 'img/staff.png' %}" alt="Card image" style="width:100%">
           <div class="card-body">
             <h4 class="card-title">Staff Management System</h4>
             <div class="card-text">
@@ -515,7 +517,7 @@
 
       <div class="col-lg-4 mt-4">
         <div class="card projectsContent">
-          <img class="card-img-top" src="static/img/library.png" alt="Card image" style="width:100%">
+          <img class="card-img-top" src="{% static 'img/library.png' %}" alt="Card image" style="width:100%">
           <div class="card-body">
             <h4 class="card-title">Library Book Lending System</h4>
             <div class="card-text">
@@ -569,6 +571,6 @@
     </div>
   </footer>
     <!-- load javascript after loading all html content -->
-    <script src="static/js/script.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>
